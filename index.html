@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Comentarios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+        }
+        .comentarios-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .alerta {
+            display: none;
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            border: 1px solid #f5c6cb;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+            box-sizing: border-box;
+        }
+        textarea::placeholder {
+            color: #999;
+            font-style: italic;
+        }
+        button {
+            display: block;
+            width: 100px;
+            margin: 20px auto 0;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        #mensajeConfirmacion {
+        display: none;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: #d4edda;
+        border: 1px solid #c3e6cb;
+        border-radius: 5px;
+        color: #155724;
+        text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="comentarios-container">
+        <div id="mensajeAlerta" class="alerta"></div> <!-- Cuadro de alerta -->
+        <textarea id="areaTexto" placeholder="¡Nos encantaría conocer tu experiencia! Cuéntanos cómo podemos mejorar o qué te gustaría ver en nuestra app."></textarea>
+        <button id="boton">Enviar</button>
+        <div id="mensajeConfirmacion"></div> <!-- Cuadro de mensaje de agradecimiento -->
+    </div>
+<script src="index.js"></script>
+</body>
+</html>
